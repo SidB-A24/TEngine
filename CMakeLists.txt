@@ -11,12 +11,31 @@ endif()
 
 project ("TEngine")
 
-# Add source to this project's executable.
-add_executable (TEngine  "tengine/Logger.h" "tengine/Logger.cpp" "tengine/Resourcer.h" "tengine/Resourcer.cpp" "tengine/SceneManager.h" "tengine/SceneManager.cpp" "tengine/Scene.h" "tengine/Scene.cpp")
+add_library(TEngine
+"src/Logger.h"
+"src/Resourcer.h"
+"src/SceneManager.h"
+"src/Scene.h"
+"src/Logger.cpp"
+"src/Resourcer.cpp"
+"src/SceneManager.cpp"
+"src/Scene.cpp"
+)
 
-if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET TEngine PROPERTY CXX_STANDARD 20)
-endif()
+target_include_directories(TEngine
+    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+install(TARGETS TEngine DESTINATION lib)
+install(DIRECTORY include/ DESTINATION include)
+
+
+# Add source to this project's executable.
+# add_executable (TEngine "src/Logger.cpp" "src/Logger.h" "src/Resourcer.cpp" "src/Resourcer.h" "src/Scene.cpp" "src/Scene.h" "src/SceneManager.cpp" "src/SceneManager.h" "include/TEngine.h")
+
+#if (CMAKE_VERSION VERSION_GREATER 3.12)
+#  set_property(TARGET TEngine PROPERTY CXX_STANDARD 20)
+#endif()
 
 # TODO: Add tests and install targets if needed.
 # Dependencies
