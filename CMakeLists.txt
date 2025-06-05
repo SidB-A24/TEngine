@@ -20,7 +20,7 @@ add_library(TEngine
 "src/Resourcer.cpp"
 "src/SceneManager.cpp"
 "src/Scene.cpp"
-)
+ "src/supplementaries/RaylibVector2Hash.h" "src/supplementaries/RaylibVector2Operators.h")
 
 target_include_directories(TEngine
     PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
