@@ -31,3 +31,9 @@ inline Vector2 operator*(const Vector2& v, float F)
 		v.y * F
 	};
 }
+
+//Equality
+inline bool operator==(const Vector2& v1, const Vector2& v2)
+{
+	return (v1.x == v2.x) && (v1.y == v2.y);
+}

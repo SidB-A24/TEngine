@@ -1,10 +1,15 @@
 #pragma once
 #include "raylib.h"
-#include "raymath.h"
 
 #include <functional>
 
-//Implements a hash function for the Vector2 struct in Raylib.
+/*
+Implements a hash function for the Vector2 struct in Raylib.
+
+NOTE: RaylibVector2Operators.h is essential for the Vector2 class to be usable in unordered maps.
+*/
+#include "RaylibVector2Operators.h"
+
 namespace std
 {
 	template<>
