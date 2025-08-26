@@ -3,6 +3,8 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
+
+
 # Enable Hot Reload for MSVC compilers if supported.
 if (POLICY CMP0141)
   cmake_policy(SET CMP0141 NEW)
@@ -20,7 +22,7 @@ add_library(TEngine
 "src/Resourcer.cpp"
 "src/SceneManager.cpp"
 "src/Scene.cpp"
- "src/supplementaries/RaylibVector2Hash.h" "src/supplementaries/RaylibVector2Operators.h")
+ "src/supplementaries/RaylibVector2Hash.h" "src/supplementaries/RaylibVector2Operators.h" "include/TPhysics.h" "src/physics/System.h" "src/physics/System.cpp" "src/physics/RigidBody.h" "src/physics/Affector.h" "src/physics/Affector.cpp" "src/physics/Hitbox.h" "src/physics/Hitbox.cpp" "src/physics/ForceVector.h" "src/physics/ForceVector.cpp" "src/physics/FreeBody.h" "src/physics/FreeBody.cpp" "src/physics/Collisions.cpp" "src/physics/Collisions.h" "src/physics/RigidStatic.h" "src/physics/RigidStatic.cpp")
 
 target_include_directories(TEngine
     PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
