@@ -1,7 +1,7 @@
 #include "RigidBody.h"
 #include "RigidBody.h"
 
-TPhysics::RigidBody::RigidBody(HitBox hitbox, float mass, float momentOfInertia, float grip)
+TPhysics::RigidBody::RigidBody(const HitBox& hitbox, float mass, float momentOfInertia, float grip)
 	:p_mass(mass), p_grip(grip), p_momentOfInertia(momentOfInertia), Affector(hitbox)
 {
 

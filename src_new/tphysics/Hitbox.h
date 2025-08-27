@@ -2,7 +2,7 @@
 
 #include "raylib.h"
 #include "raymath.h"
-#include "../supplementaries/RaylibVector2Operators.h"
+#include "../tutilities/RaylibVector2Operators.h"
 
 #include <vector>
 
@@ -11,6 +11,8 @@ namespace TPhysics
 	class HitBox
 	{
 	public:
+		virtual ~HitBox() = default;
+
 		virtual bool is_pt_in_hitbox(Vector2 pt) { return false; };
 
 		virtual std::vector<Vector2> get_points_on_perimeter(size_t count) 

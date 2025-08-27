@@ -46,6 +46,22 @@ inline Vector2 operator*(float F, const Vector2& v)
 	};
 } //Twice for commutative.
 
+inline Vector2 operator/(const Vector2& v, float F)
+{
+	return Vector2{
+		v.x / F,
+		v.y / F
+	};
+}
+inline Vector2 operator/(float F, const Vector2& v)
+{
+	return Vector2{
+		v.x / F,
+		v.y / F
+	};
+} //Twice for commutative.
+
+
 //Equality
 inline bool operator==(const Vector2& v1, const Vector2& v2)
 {

@@ -3,7 +3,7 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-
+set(CMAKE_CXX_STANDARD 23)
 
 # Enable Hot Reload for MSVC compilers if supported.
 if (POLICY CMP0141)
@@ -14,15 +14,27 @@ endif()
 project ("TEngine")
 
 add_library(TEngine
-"src/Logger.h"
-"src/Resourcer.h"
-"src/SceneManager.h"
-"src/Scene.h"
-"src/Logger.cpp"
-"src/Resourcer.cpp"
-"src/SceneManager.cpp"
-"src/Scene.cpp"
- "src/supplementaries/RaylibVector2Hash.h" "src/supplementaries/RaylibVector2Operators.h" "include/TPhysics.h" "src/physics/System.h" "src/physics/System.cpp" "src/physics/RigidBody.h" "src/physics/Affector.h" "src/physics/Affector.cpp" "src/physics/Hitbox.h" "src/physics/Hitbox.cpp" "src/physics/ForceVector.h" "src/physics/ForceVector.cpp" "src/physics/FreeBody.h" "src/physics/FreeBody.cpp" "src/physics/Collisions.cpp" "src/physics/Collisions.h" "src/physics/RigidStatic.h" "src/physics/RigidStatic.cpp")
+"src_new/tengine/Logger.h"
+"src_new/tengine/Resourcer.h"
+"src_new/tengine/SceneManager.h"
+"src_new/tengine/Scene.h"
+"src_new/tengine/Logger.cpp"
+"src_new/tengine/Resourcer.cpp"
+"src_new/tengine/SceneManager.cpp"
+"src_new/tengine/Scene.cpp"
+ "src_new/tutilities/RaylibVector2Hash.h" "src_new/tutilities/RaylibVector2Operators.h" "include/TPhysics.h" "src/physics/System.h" "src/physics/System.cpp" "src/physics/RigidBody.h" "src/physics/Affector.h" "src/physics/Affector.cpp" "src/physics/Hitbox.h" "src/physics/Hitbox.cpp" "src/physics/ForceVector.h" "src/physics/ForceVector.cpp" "src/physics/FreeBody.h" "src/physics/FreeBody.cpp" "src/physics/Collisions.cpp" "src/physics/Collisions.h" "src/physics/RigidStatic.h" "src/physics/RigidStatic.cpp"
+        src_new/tengine/TObject.h
+        src_new/tengine/TModule.cpp
+        src_new/tengine/TModule.h
+        src_new/tphysics/TPhysicsRigidBodyModule.cpp
+        src_new/tphysics/TPhysicsRigidBodyModule.h
+        src_new/tphysics/ForceVector.cpp
+        src_new/tphysics/ForceVector.h
+        src_new/tengine/TPoly.cpp
+        src_new/tengine/TPoly.h
+        src_new/tphysics/Collider.cpp
+        src_new/tphysics/Collider.h
+)
 
 target_include_directories(TEngine
     PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include

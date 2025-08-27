@@ -16,10 +16,10 @@ namespace TPhysics
 		Vector2 p_vel;
 		Vector2 p_pos;
 		
-		//FreeBody p_freeBody = FreeBody();
+		FreeBody p_freeBody = FreeBody();
 
 	public:
-		RigidBody(HitBox hitbox, float mass, float momentOfInertia, float grip);
+		RigidBody(const HitBox& hitbox, float mass, float momentOfInertia, float grip);
 
 		void apply_translation_impulse();
 		void apply_rotational_impulse();

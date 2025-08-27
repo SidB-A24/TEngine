@@ -1,5 +1,8 @@
 #include "ForceVector.h"
 
+
+
+
 TPhysics::ForceVector::ForceVector(Vector2 origin, Vector2 direction, float magnitude)
 	:origin(origin), direction(direction), magnitude(magnitude)
 {
